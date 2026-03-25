@@ -26,7 +26,7 @@
 			    <input type="text" name="phone" class="form-control" placeholder="Phone" value="<?= $student['phone']; ?>">
 			  </div>
 			  <div class="form-group">
-			    <label>Image</label>
+			    <label>Image (jpg, png)</label>
 			    <input type="file" name="image" class="form-control" placeholder="Phone">
 			    <?php if ($student['image']): ?>
 					<img src="<?php echo  base_url() . 'public/uploads/' . $student['image'] ?>" class="img img-thumbnail" width="100px">

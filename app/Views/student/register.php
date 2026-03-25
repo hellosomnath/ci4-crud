@@ -24,7 +24,7 @@
 			    <input type="text" name="phone" class="form-control" placeholder="Phone">
 			  </div>
 			  <div class="form-group">
-			    <label>Image</label>
+			    <label>Image (jpg, png)</label>
 			    <input type="file" name="image" class="form-control" placeholder="Phone">
 			  </div>
 			  <em>* fields are mandatory field</em>

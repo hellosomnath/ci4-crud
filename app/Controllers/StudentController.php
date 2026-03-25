@@ -28,6 +28,10 @@ class StudentController extends BaseController
             'email' => [
                 'rules' => 'required|min_length[3]|valid_email|is_unique[student.email]',
                 'label' => 'Email'
+            ],
+            'image' => [
+                'rules' => 'is_image[image]|mime_in[image,image/jpg,image/jpeg,image/png]',
+                'label' => 'Image'
             ]
         ];
 
@@ -39,12 +43,10 @@ class StudentController extends BaseController
             'first_name'    => $this->request->getPost('fname'),
             'last_name'     => $this->request->getPost('lname'),
             'email'         => $this->request->getPost('email'),
-            'email'         => $this->request->getPost('email'),
             'phone'         => $this->request->getPost('phone'),
         ];
 
         $file = $this->request->getFile('image');
-        // dd($file);
         if (file_exists($file)) {
             $newName = $file->getRandomName();
             $file->move(FCPATH . 'public/uploads', $newName); 
@@ -86,6 +88,10 @@ class StudentController extends BaseController
                 'rules' => 'required|min_length[3]|valid_email',
                 'label' => 'Email'
             ],
+            'image' => [
+                'rules' => 'is_image[image]|mime_in[image,image/jpg,image/jpeg,image/png]',
+                'label' => 'Image'
+            ]
         ];
 
         $student = new StudentModel();
