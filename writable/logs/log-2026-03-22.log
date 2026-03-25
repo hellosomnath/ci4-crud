@@ -1,0 +1,16 @@
+DEBUG - 2026-03-22 19:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-03-22 19:17:35 --> ErrorException: Undefined variable $page_title
+[Method: GET, Route: student/register]
+in APPPATH\Views\layouts\default.php on line 7.
+ 1 APPPATH\Views\layouts\default.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page_title', 'C:\\xampp\\htdocs\\ci4-crud\\app\\Views\\layouts\\default.php', 7)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\ci4-crud\\app\\Views\\layouts\\default.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('layouts/default.php', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('student/register', [], true)
+ 6 APPPATH\Controllers\StudentController.php(13): view('student/register')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(58): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
